@@ -1,0 +1,143 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'	// 추가
+}
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    namespace 'com.example.saloris'
+    compileSdk 33
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    defaultConfig {
+        applicationId "com.example.saloris"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+        coreLibraryDesugaringEnabled true
+
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation "com.tbuonomo:dotsindicator:4.3"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'com.google.mlkit:face-mesh-detection:+'
+    implementation ('com.github.prolificinteractive:material-calendarview:2.0.1')
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.11'
+    implementation 'androidx.test:core-ktx:1.4.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation 'com.google.android.gms:play-services-wearable:18.0.0'
+    wearApp project(":wear")
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:29.2.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-analytics:17.2.3'
+    implementation 'com.google.firebase:firebase-core:17.2.3'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+//message
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'com.google.android.gms:play-services-wearable:18.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.google.android.material:material:1.8.0-alpha03'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    //알림
+    implementation 'androidx.core:core:1.2.0'
+    //influxDB
+    implementation "com.influxdb:influxdb-client-kotlin:6.6.0"
+
+    // Lifecycle - connect to DB
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.0-alpha02"
+    implementation "androidx.lifecycle:lifecycle-service:2.6.0-alpha02"
+
+    // Desugaring
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    // Navigation Jetpack (Kotlin)
+    def nav_version = "2.5.1"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Coroutines
+    def coroutines_version = "1.6.3"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
+
+    //chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    // MediaPipe
+    implementation 'com.google.mediapipe:facemesh:latest.release'
+    //prolificinteractive
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
+
+    implementation("androidx.room:room-runtime:2.5.0")
+    annotationProcessor("androidx.room:room-compiler:2.5.0")
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:2.5.0")
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:2.5.0")
+
+    // optional - RxJava2 support for Room
+    implementation("androidx.room:room-rxjava2:2.5.0")
+
+    // optional - RxJava3 support for Room
+    implementation("androidx.room:room-rxjava3:2.5.0")
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation("androidx.room:room-guava:2.5.0")
+
+    // optional - Test helpers
+    testImplementation("androidx.room:room-testing:2.5.0")
+
+    // optional - Paging 3 Integration
+    implementation("androidx.room:room-paging:2.5.0")
+}

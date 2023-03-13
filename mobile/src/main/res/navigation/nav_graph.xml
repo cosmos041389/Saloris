@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.saloris.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recordFragment"
+            app:destination="@id/recordFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_Networking"
+            app:destination="@id/Networking" />
+        <action
+            android:id="@+id/action_homeFragment_to_driveFragment"
+            app:destination="@id/driveFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_IntroSlideFragment"
+            app:destination="@id/IntroSlideFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_SplashFragment"
+            app:destination="@id/splashFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerSuccessFragment"
+            app:destination="@id/registerSuccessFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.saloris.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_IntroSlideFragment"
+            app:destination="@id/IntroSlideFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_HomeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+     <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.saloris.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_findPasswordFragment"
+            app:destination="@id/findPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginStartFragment"
+        android:name="com.example.saloris.LoginStartFragment"
+        android:label="fragment_login_start"
+        tools:layout="@layout/fragment_login_start" >
+        <action
+            android:id="@+id/action_loginStartFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginStartFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+        <action
+            android:id="@+id/action_loginStartFragment_to_registerSuccessFragment"
+            app:destination="@id/registerSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.saloris.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_registerSuccessFragment"
+            app:destination="@id/registerSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerSuccessFragment"
+        android:name="com.example.saloris.RegisterSuccessFragment"
+        android:label="RegisterSuccessFragment" >
+        <action
+            android:id="@+id/action_registerSuccessFragment_to_RequiredInfoFragment"
+            app:destination="@id/requiredInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requiredInfoFragment"
+        android:name="com.example.saloris.RequiredInfo.RequiredInfo1Fragment"
+        android:label="fragment_required_info"
+        tools:layout="@layout/fragment_required_info2" >
+        <action
+            android:id="@+id/action_requiredInfoFragment_to_requiredInfo1Fragment"
+            app:destination="@id/requiredInfo1Fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/requiredInfo1Fragment"
+        android:name="com.example.saloris.RequiredInfo.RequiredInfo2Fragment"
+        android:label="fragment_required_info1"
+        tools:layout="@layout/fragment_required_info2">
+        <action
+            android:id="@+id/action_requiredInfo1Fragment_to_requiredInfo2Fragment"
+            app:destination="@id/requiredInfo2Fragment"/>
+        <action
+            android:id="@+id/action_requiredInfo1Fragment_to_requiredInfoFragment"
+            app:destination="@id/requiredInfoFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/requiredInfo2Fragment"
+        android:name="com.example.saloris.RequiredInfo.RequiredInfo3Fragment"
+        android:label="fragment_required_info2"
+        tools:layout="@layout/fragment_required_info3">
+        <action
+            android:id="@+id/action_requiredInfo2Fragment_to_requiredInfo1Fragment"
+            app:destination="@id/requiredInfo1Fragment"/>
+        <action
+            android:id="@+id/action_requiredInfo2Fragment_to_requiredInfo3Fragment"
+            app:destination="@id/requiredInfo3Fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/requiredInfo3Fragment"
+        android:name="com.example.saloris.RequiredInfo.RequiredInfo4Fragment"
+        android:label="fragment_required_info3"
+        tools:layout="@layout/fragment_required_info4">
+        <action
+            android:id="@+id/action_requiredInfo3Fragment_to_requiredInfo2Fragment"
+            app:destination="@id/requiredInfo2Fragment"/>
+        <action
+            android:id="@+id/action_requiredInfo3Fragment_to_requiredInfo4Fragment"
+            app:destination="@id/requiredInfo4Fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/requiredInfo4Fragment"
+        android:name="com.example.saloris.RequiredInfo.RequiredInfo5Fragment"
+        android:label="fragment_required_info4"
+        tools:layout="@layout/fragment_required_info5">
+        <action
+            android:id="@+id/action_requiredInfo4Fragment_to_requiredInfo3Fragment"
+            app:destination="@id/requiredInfo3Fragment"/>
+        <action
+            android:id="@+id/action_requiredInfo4Fragment_to_requiredInfo5Fragment"
+            app:destination="@id/requiredInfo5Fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/requiredInfo5Fragment"
+        android:name="com.example.saloris.RequiredInfo.RequiredInfo6Fragment"
+        android:label="fragment_required_info5"
+        tools:layout="@layout/fragment_required_info6">
+        <action
+            android:id="@+id/action_requiredInfo5Fragment_to_requiredInfo4Fragment"
+            app:destination="@id/requiredInfo2Fragment"/>
+        <action
+            android:id="@+id/action_requiredInfo5Fragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.saloris.AccountFragment"
+        android:label="AccountFragment" >
+        <action
+            android:id="@+id/action_accountFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="com.example.saloris.Record.RecordFragment"
+        android:label="fragment_record"
+        tools:layout="@layout/fragment_record" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.saloris.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_requiredInfoFragment"
+            app:destination="@id/requiredInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.saloris.Help.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" >
+            <action
+                android:id="@+id/action_helpFragment_to_helpSlide1Fragment"
+                app:destination="@+id/helpSlide1Fragment"/>
+            <action
+                android:id="@+id/action_helpFragment_to_homeFragment"
+                app:destination="@+id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/helpSlide1Fragment"
+        android:name="com.example.saloris.Help.HelpSlide1Fragment"
+        android:label="fragment_help_slide1"
+        tools:layout="@layout/fragment_help_slide1" >
+        <action
+            android:id="@+id/action_help1SlideFragment_to_helpSlide2Fragment"
+            app:destination="@+id/helpSlide2Fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/helpSlide2Fragment"
+        android:name="com.example.saloris.Help.HelpSlide2Fragment"
+        android:label="fragment_help_slide2"
+        tools:layout="@layout/fragment_help_slide2" >
+        <action
+            android:id="@+id/action_helpSlide2Fragment_to_helpSlide3Fragment"
+            app:destination="@+id/helpSlide3Fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/helpSlide3Fragment"
+        android:name="com.example.saloris.Help.HelpSlide3Fragment"
+        android:label="fragment_help_slide3"
+        tools:layout="@layout/fragment_help_slide3" >
+        <action
+            android:id="@+id/action_helpSlide3Fragment_to_homeFragment"
+            app:destination="@+id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/findPasswordFragment"
+        android:name="com.example.saloris.FindPasswordFragment"
+        android:label="fragment_find_password"
+        tools:layout="@layout/fragment_find_password" />
+    <fragment
+        android:id="@+id/IntroSlideFragment"
+        android:name="com.example.saloris.Intro.IntroSlideFragment"
+        android:label="fragment_intro_slide"
+        tools:layout="@layout/fragment_intro_slide" >
+        <action
+            android:id="@+id/action_IntroSlideFragment_to_homeFragment"
+            app:destination="@+id/homeFragment"/>
+        <action
+            android:id="@+id/action_splashFragment_to_IntroSlideFragment"
+            app:destination="@id/IntroSlideFragment" />
+        <action
+            android:id="@+id/action_IntroSlideFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/IntroSlide1Fragment"
+        android:name="com.example.saloris.Intro.IntroSlide1Fragment"
+        android:label="fragment_intro_slide1"
+        tools:layout="@layout/fragment_intro_slide1" />
+    <fragment
+        android:id="@+id/IntroSlide2Fragment"
+        android:name="com.example.saloris.Intro.IntroSlide2Fragment"
+        android:label="fragment_intro_Slide2"
+        tools:layout="@layout/fragment_intro_slide2" />
+    <fragment
+        android:id="@+id/IntroSlide3Fragment"
+        android:name="com.example.saloris.Intro.IntroSlide3Fragment"
+        android:label="fragment_intro_Slide3"
+        tools:layout="@layout/fragment_intro_slide3" >
+        <action
+            android:id="@+id/action_IntroSlide3Fragment_to_homeFragment"
+            app:destination="@+id/homeFragment"/>
+        <action
+            android:id="@+id/action_IntroSlide3Fragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Networking"
+        android:name="com.example.saloris.data.Networking"
+        android:label="fragment_networking"
+        tools:layout="@layout/activity_networking" />
+    <fragment
+        android:id="@+id/driveFragment"
+        android:name="com.example.saloris.DriveFragment"
+        android:label="fragment_drive"
+        tools:layout="@layout/fragment_drive" >
+        <action
+            android:id="@+id/action_driveFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>

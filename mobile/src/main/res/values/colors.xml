@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_94">#F0000000</color>
+    <color name="black_50">#55000000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="orange">#FFFF8800</color>
+    <color name="blue">#FF0055FF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="drowsy">#FFFFB031</color>
+    <color name="light_grey">#FFE4E4E4</color>
+
+    <color name="purple_200">#2565F8</color>
+    <color name="purple_500">#2565F8</color>
+    <color name="purple_700">#9FC8FF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#FF3180FF</color>
+    <color name="black_15">#26000000</color>
+    <color name="grey">#FFC6C6C6</color>
+    <color name="heart_rate">#FFEF5261</color>
+
+    <color name="line_primary">#FF707070</color>
+    <color name="line_secondary">#FFE6E6E6</color>
+    <color name="line_tertiary">#FF8D8D8D</color>
+    <color name="line_quaternary">#FFBCBCBC</color>
+    <color name="line_warning">#FFC60000</color>
+
+    <color name="background_primary">#FFF7F7F7</color>
+    <color name="card_grey_background">#FFF6F6F6</color>
+    <color name="background_secondary">#FFE6E6E6</color>
+    <color name="background_warning">#55C60000</color>
+    <color name="background_disabled">#FFE6E6E6</color>
+    <color name="background_edittext">@color/background_secondary</color>
+
+    <color name="chart_line_sleep">#FFC60000</color>
+    <color name="chart_line_nonsleep">#2565F8</color>
+
+    <color name="face_guideline">@color/white</color>
+    <color name="face_guideline_complete">@color/primary</color>
+</resources>
